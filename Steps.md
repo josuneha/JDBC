@@ -1,4 +1,5 @@
-#JDBC in five minutes
+
+# JDBC in five minutes
 
 This short tutorial provides an introduction to the JDBC interface for connecting Java programs with SQL-based databases, giving a sequence of steps to follow.
 In this course, we will work with an Access database. 
@@ -23,4 +24,10 @@ Connection connection = null;
 
 String url="jdbc:odbc:northwind";	         
 connection = DriverManager.getConnection(url); 
+```
+
+## Step 5: Create a Statement object
+```
+		   Statement statement;
+       statement = connection.createStatement();
 ```
