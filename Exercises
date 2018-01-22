@@ -1,0 +1,7 @@
+# JDBC Lab
+
+## Exercise 1
+Develop a program that connects with northbrick database and shows the information contained in Employees table. You should write their LastName, FirstName and City where they are from. 
+
+
+## Exercise 2
