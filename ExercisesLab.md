@@ -28,7 +28,8 @@ desired values.
 
 ## Exercise 2 Upgrading query
 Develop a program that connects with northbrick database and updates the information of one specific employee. For instance, we would like to change the city where one specific employee (EmployeeID=2) lives. You can choose any city name you want. 
-Example: Update Employees SET City=Madrid WHERE EmployeeID=2;
+
+Example: Update Employees SET City='Madrid' WHERE EmployeeID=2;
 
 Now, in this second type of query exercise we are going to develop Data Upgrading Queries, which are queries that allow us to insert, modify and delete rows on a table of the Data Base with the following types SQL sentences: INSERT INTO, UPDATE or DELETE.
 In this case we will be introducing the executeUpdate(String sql) method of the class Statement. This specific method doesn’t have any returning object of the class ResultSet,instead it returns an Integer number which corresponds to the number of rows that were modified
@@ -36,6 +37,7 @@ with the executed SQL sentence; if the SQL sentence doesn’t modify any rows th
 
 ## Exercise 3 Upgrading query using parameters
 Based on the code developed in the previous exercise, modify it so that you can give the information of the employee and the city you want to change as parameters when you execute the java file. 
+
 Example: java filename EmployeeID City
          java basicJDBCUpdate 3 Barcelona
          
