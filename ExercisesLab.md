@@ -39,6 +39,7 @@ with the executed SQL sentence; if the SQL sentence doesn’t modify any rows th
 Based on the code developed in the previous exercise, modify it so that you can give the information of the employee and the city you want to change as parameters when you execute the java file. 
 
 Example: java filename EmployeeID City
+
          java basicJDBCUpdate 3 Barcelona
          
 ## Exercise 4 Exception handling (try and catch)
