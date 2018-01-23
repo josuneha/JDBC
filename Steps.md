@@ -1,7 +1,7 @@
 
 # JDBC in five minutes
 
-This short tutorial provides an introduction to the JDBC interface for connecting Java programs with SQL-based databases, giving a sequence of steps to follow.
+This short tutorial provides an introduction to the JDBC interface, a driver for connecting Java programs with SQL-based databases, giving a sequence of steps to follow.
 In this course, we will work with an Access database. 
 
 ## Step 1: Define a DNS (Domain Name System)
@@ -62,7 +62,7 @@ int delnum = stmt.executeUpdate(deleteStr);
 
 ## Step 7: Process the result (if it is a SELECT query)
 
-Remember you have to use next() function to point the cursor to the first row.
+Remember you have to use the next() function to point the cursor to the first row.
 
 ```
 while (rs.next()) {
@@ -72,7 +72,7 @@ while (rs.next()) {
     System.out.println(s+”   “+y);
 } 
 ```
-## Step 8: Close ResultSet and statement (if you don't need them)
+## Step 8: Close ResultSet and statement (if you don't need them anymore)
 
 ```
 rs.close();
