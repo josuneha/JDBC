@@ -8,7 +8,7 @@ This repository includes the following files:
 
 * ExercisesLab includes some exercises to develop to understand better the use of JDBC and ODBC.
 
-* Steps is a brief tutorial that explains the code to include in your java application to use a database. 
+* JDBCTutorial is a brief tutorial that explains the code to include in your java application to use a database. 
 
 * BasicJDBC2 and basicJDBC3 are used in the exercise 4 included in ExercisesLab file. 
 
