@@ -28,6 +28,34 @@ connection = DriverManager.getConnection(url);
 
 ## Step 5: Create a Statement object
 ```
-		   Statement statement;
-       statement = connection.createStatement();
+Statement statement;
+statement = connection.createStatement();
 ```
+
+## Step 6: Execute a query using a Statement
+
+The Statement interface defines 2 methods for executing SQL queries:
+1) public ResultSet executeQuery(String sql)
+ returns a ResultSet that includes all rows and columns which match the SELECT query
+ 
+ ```
+ResultSet resultSet;
+String query = "SELECT * FROM Authors";
+resultSet = stmt.executeQuery( query );
+
+```
+ 
+2) public int executeUpdate(String sql)
+executeUpdate returns the number of rows changed by the update statement. This is used for insert statements, update statements and delete statements
+
+```
+String deleteStr = “DELETE FROM Authors WHERE LastName=‘Follet’";
+int delnum = stmt.executeUpdate(deleteStr);
+```
+
+
+
+## Step 7: Execute a query using a Statement
+
+
+
