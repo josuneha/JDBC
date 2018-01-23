@@ -35,13 +35,18 @@ statement = connection.createStatement();
 ## Step 6: Execute a query using a Statement
 
 The Statement interface defines 2 methods for executing SQL queries:
+
 1) public ResultSet executeQuery(String sql)
  returns a ResultSet that includes all rows and columns which match the SELECT query
  
  ```
-ResultSet resultSet;
+ResultSet rs;
 String query = "SELECT * FROM Authors";
-resultSet = stmt.executeQuery( query );
+
+// We recommend you to print the query before executing it
+System.out.println("SQL: " + query);
+
+rs = stmt.executeQuery( query );
 
 ```
  
@@ -55,7 +60,28 @@ int delnum = stmt.executeUpdate(deleteStr);
 
 
 
-## Step 7: Execute a query using a Statement
+## Step 7: Process the result (if it is a SELECT query)
 
+Remember you have to use next() function to point the cursor to the first row.
 
+```
+while (rs.next()) {
+    String s = rs.getString(“LastName”);
+    int y = rs.getInt(“YearBorn”);
+    
+    System.out.println(s+”   “+y);
+} 
+```
+## Step 8: Close ResultSet and statement (if you don't need them)
+
+```
+rs.close();
+
+stmt.close();
+```
+## Step 9: Close the connection
+
+Close the connection when you no longer need to access the database. The same connection object can be used to create further statements.
+
+connection.close();
 
