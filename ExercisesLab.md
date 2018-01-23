@@ -42,6 +42,7 @@ with the executed SQL sentence; if the SQL sentence doesn’t modify any rows th
 
 ## Exercise 3 Updating query using parameters
 Based on the code developed in the previous exercise, develop a program that takes two String arguments from the command line: the employee id and the city you want to change, and updates the database with that information.  
+You should check that the number of the arguments you receive after executing the file is 2, otherwise you should return the following message: 'Not enough parameters in the call'.
 
 Example: java filename EmployeeID City
 ```
