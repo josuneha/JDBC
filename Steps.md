@@ -8,7 +8,7 @@ In this course, we will work with an Access database.
 
 ## Step 1: Define a DNS (Domain Name System)
 
-![DNSStep1](http://github.com/josuneha/JDBC/DNSStep1.png)
+![DNSStep1](https://github.com/josuneha/JDBC/blob/master/DNSStep2.png)
 
 ![DNSStep2](http://github.com/josuneha/JDBC/DNSStep2.png)
 
