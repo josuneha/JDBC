@@ -8,12 +8,12 @@ import java.sql.*;
 class basicJDBC {
     public static void main(String args[]) throws ClassNotFoundException, SQLException {
         Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-        Connection connection = DriverManager.getConnection("jdbc:odbc:basic");
+        Connection connection = DriverManager.getConnection("jdbc:odbc:northbrick");
         Statement statement = connection.createStatement();
-        ResultSet result = statement.executeQuery("Select titulo, autor from datos");
+        ResultSet result = statement.executeQuery("Select * from Shippers");
         while(result.next()) {
-            System.out.print(  result.getString("titulo")+", ");
-            System.out.println(result.getString("autor"));
+            System.out.print(  result.getString("CompanyName")+", ");
+            System.out.println(result.getString("Phone"));
         }
         connection.close();
     }
@@ -26,7 +26,7 @@ This example shows a Data Selection Query, meaning it requests rows of the data 
 This process was done with the executeQuery(String sql) method of the class Statement, which returns an object of the type ResultSet with the rows that fulfill the specific conditions of the SQL sentence. This ResultSet object can be iterated row by row to obtain the
 desired values.
 
-## Exercise 2 Upgrading query
+## Exercise 2 Updating query
 Develop a program that connects with northbrick database and updates the information of one specific employee. For instance, we would like to change the city where one specific employee (EmployeeID=2) lives. You can choose any city name you want. 
 
 Example: Update Employees SET City='Madrid' WHERE EmployeeID=2;
@@ -35,7 +35,7 @@ Now, in this second type of query exercise we are going to develop Data Upgradin
 In this case we will be introducing the executeUpdate(String sql) method of the class Statement. This specific method doesn’t have any returning object of the class ResultSet,instead it returns an Integer number which corresponds to the number of rows that were modified
 with the executed SQL sentence; if the SQL sentence doesn’t modify any rows the returning value will be 0.
 
-## Exercise 3 Upgrading query using parameters
+## Exercise 3 Updating query using parameters
 Based on the code developed in the previous exercise, modify it so that you can give the information of the employee and the city you want to change as parameters when you execute the java file. 
 
 Example: java filename EmployeeID City
