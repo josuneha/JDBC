@@ -41,12 +41,12 @@ In this case we will be introducing the executeUpdate(String sql) method of the 
 with the executed SQL sentence; if the SQL sentence doesn’t modify any rows the returning value will be 0.
 
 ## Exercise 3 Updating query using parameters
-Based on the code developed in the previous exercise, make a program that gives the information of the employee and the city you want to change as parameters when you execute the java file. 
+Based on the code developed in the previous exercise, develop a program that takes two String arguments from the command line: the employee id and the city you want to change, and updates the database with that information.  
 
 Example: java filename EmployeeID City
-
+```
          java basicJDBCUpdate 3 Barcelona
-         
+```         
 ## Exercise 4 Exception handling (try and catch)
 
 An Exception is an unwanted event that interrupts the normal flow of the program. When an exception occurs program execution gets terminated. In such cases we get a system generated error message. By handling the exceptions we can provide a meaningful message to the user about the issue rather than a system generated message, which may not be understandable to a user.
