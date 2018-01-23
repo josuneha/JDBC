@@ -6,15 +6,21 @@ You can use the following basic example and modify it not to start programming f
 ```
 import java.sql.*;
 class basicJDBC {
+
     public static void main(String args[]) throws ClassNotFoundException, SQLException {
+
         Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
         Connection connection = DriverManager.getConnection("jdbc:odbc:northbrick");
+        
         Statement statement = connection.createStatement();
         ResultSet result = statement.executeQuery("Select * from Shippers");
+        
         while(result.next()) {
             System.out.print(  result.getString("CompanyName")+", ");
             System.out.println(result.getString("Phone"));
         }
+        
+        
         connection.close();
     }
 }
