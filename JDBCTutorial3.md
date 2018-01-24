@@ -6,12 +6,9 @@ JDBC PreparedStatement can be used when you plan to use the same SQL statement m
 Below example shows how to use PreparedStatement.
 
 ```
-package com.java2novice.jdbc;
+
  
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*; 
  
 public class MyPreparedStatement {
  
@@ -20,20 +17,26 @@ public class MyPreparedStatement {
         Connection con = null;
         PreparedStatement prSt = null;
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            con = DriverManager.
-                getConnection("jdbc:oracle:thin:@<hostname>:<port num>:<DB name>"
-                    ,"user","password");
+		         	Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+        
+            con = DriverManager.getConnection("jdbc:odbc:northbrick");
+            
+            
             String query = "insert into emp(name,salary) values(?,?)";
             prSt = con.prepareStatement(query);
             prSt.setString(1, "John");
             prSt.setInt(2, 10000);
+            
             //count will give you how many records got updated
             int count = prSt.executeUpdate();
+            
             //Run the same query with different values
             prSt.setString(1, "Cric");
             prSt.setInt(2, 5000);
+            
             count = prSt.executeUpdate();
+            
+            
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
