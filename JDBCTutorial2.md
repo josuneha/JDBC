@@ -16,4 +16,53 @@ The try block contains set of statements where an exception can occur. A try blo
 
 A catch block is where you handle the exceptions, this block must follow a try block. A single try block can have several catch blocks associated with it. You can catch different exceptions in different catch blocks. When an exception occurs in try block, the corresponding catch block that handles that particular exception executes. For example if an arithmetic exception occurs in try block then the statements enclosed in catch block for arithmetic exception executes. If an exception occurs in the try block then the control of execution is passed to the corresponding catch block. A single try block can have multiple catch blocks associated with it, you should place the catch blocks in such a way that the generic exception handler catch block is at the last.
 
-## Examples 
+## Example
+
+```
+import java.sql.*;
+class testExceptions {
+
+    public static void main(String args[]) throws ClassNotFoundException, SQLException {
+        
+        Connection connection;
+		    
+        try{
+		
+			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+        
+			Connection connection = DriverManager.getConnection("jdbc:odbc:northbrick");
+			
+			Statement statement = connection.createStatement();
+			
+			// You should write the sql to check if there is a problem
+			String sql="Select * from Employees WHERE EmployeeID='10'";
+			System.out.println("sql: " + sql);
+		
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+                System.out.print(result.getString("LastName")+", ");
+                System.out.println(result.getString("FirstName")+ " , ");
+                System.out.println(result.getString("City"));
+            }
+            
+            result.close();
+            statement.close();
+			
+			connection.close();
+			
+        }
+		
+        // Catch any exceptions that are thrown.
+        catch(ClassNotFoundException e) {
+                  System.out.println(e.toString());
+        }
+		catch(SQLException e) {
+				System.out.println(e.toString());
+		}
+        
+    }
+    
+}
+
+```
