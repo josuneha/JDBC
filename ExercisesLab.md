@@ -58,3 +58,5 @@ If an exception occurs in the try block then the control of execution is passed 
 
 To understand better the importance of handling exceptions, you should execute the following two files (basicJDBC2 and basicJDBC3) and see the differences.  
 
+## Exercise 5 PreparedStatement: insert example
+Test the file 
