@@ -6,7 +6,7 @@ An Exception is an unwanted event that interrupts the normal flow of the program
 A method catches an exception using a combination of the try and catch keywords: 
 ```
 try {
-   // Protected code
+   //  code
 } catch (ExceptionName e1) {
    // Catch block
 }
@@ -14,11 +14,11 @@ try {
 Another option can be: 
 ```
 try {
-   // Protected code
+   // code
 } catch (ExceptionName e1) {
    // Catch block
 }finally {
-
+  //code 
 }
 ```
 
