@@ -58,7 +58,13 @@ If an exception occurs in the try block then the control of execution is passed 
 
 To understand better the importance of handling exceptions, you should execute the following two files (basicJDBC2 and basicJDBC3) and see the differences.  
 
-## Exercise 5 PreparedStatement: insert example
+## Exercise 5 PreparedStatement: select example
 Based on the example provided in [JDBCTutorial3](JDBCTutorial3.md) , modify it to select an order given a specific OrderId. 
 For instance, show the CustomerID and OrderDate from the order OrderID= 10248
+
+## Exercise 6 PreparedStatement: insert data from a file in the database 
+The file *namesAndCities.txt* contains information about employees that needs to be added to the database. Each row in the file contains the last name, first name and city. You should develop a program that reads this information from the file and inserts in the database using PreparedStatements. 
+
+## Exercise 7: Review and test the files 
+Review the following files ([ProductData.java] (ProductData.java) and [ProductDataTest.java] (ProductDataTest.java)) to understand how they work and the results we get if we execute them using the following instructions:
 
