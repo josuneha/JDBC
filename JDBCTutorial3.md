@@ -8,32 +8,39 @@ Below example shows how to use PreparedStatement.
 ```
 
  
-import java.sql.*; 
- 
-public class MyPreparedStatement {
+import java.sql.*;
+
+class MyPreparedStatements {
  
     public static void main(String a[]){
          
         Connection con = null;
         PreparedStatement prSt = null;
+		
         try {
-		         	Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+		    
+	    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
         
             con = DriverManager.getConnection("jdbc:odbc:northbrick");
             
             
-            String query = "insert into emp(name,salary) values(?,?)";
-            prSt = con.prepareStatement(query);
-            prSt.setString(1, "John");
-            prSt.setInt(2, 10000);
+            String query = "Insert into Employees (LastName, FirstName, City) values(?,?, ?)";
+            
+	   // We prepare the query
+	    prSt = con.prepareStatement(query);
+			
+	    prSt.setString(1, "Garcia");
+            prSt.setString(2, "Ane");
+            prSt.setString(3, "Madrid");
             
             //count will give you how many records got updated
             int count = prSt.executeUpdate();
             
             //Run the same query with different values
-            prSt.setString(1, "Cric");
-            prSt.setInt(2, 5000);
-            
+            prSt.setString(1, "Lopez");
+            prSt.setString(2, "Maria");
+            prSt.setString(3, "Donostia");
+			
             count = prSt.executeUpdate();
             
             
