@@ -3,10 +3,52 @@
 
 JDBC PreparedStatement can be used when you plan to use the same SQL statement many times. It is used to handle precompiled query. If we want to execute same query with different values for more than one time then precompiled queries will reduce the number of compilations. Connection.prepareStatement() method can provide you PreparedStatment object. This object provides setXXX() methods to provide query values. 
 
-Below example shows how to use PreparedStatement.
+The main feature of a PreparedStatement object is that, unlike a Statement object, it is given a SQL statement when it is created. The advantage to this is that in most cases, this SQL statement is sent to the DBMS (Data Base Management System) right away, where it is compiled. As a result, the PreparedStatement object contains not just a SQL statement, but a SQL statement that has been precompiled. This means that when the PreparedStatement is executed, the DBMS can just run the PreparedStatement SQL statement without having to compile it first.
+
+The following are the steps you should follow to use PreparedStatements:
+
+## Creating a PreparedStatement
+We create the query passing parameter (?) for the values that can be changed. THe values for ? will be set by calling the setter methods of PreparedStatement.Then, the PreparedStatement object is created. 
+
+```
+String query = "Insert into Employees (LastName, FirstName, City) values(?,?, ?)";
+
+PreparedStatement prSt = con.prepareStatement(query);
 
 ```
 
+## Inserting Parameters into a PreparedStatement
+Once a PreparedStatement is created (prepared) for the above SQL statement, you can insert parameters at the location of the question mark. This is done using the many setXXX() methods. The first number (1) is the index of the parameter to insert the value for. The second value ("Garcia") is the value to insert into the SQL statement.
+Examples of setXXX() methods: **setString, setLong, setInt, setDate, setFloat, setDouble**
+
+```
+prSt.setString(1, "Garcia");
+prSt.setString(2, "Ane");
+prSt.setString(3, "Madrid");
+```
+## Executing the PreparedStatement
+Executing the PreparedStatement looks like executing a regular Statement. To execute a query, call the executeQuery() or executeUpdate method. 
+
+```
+ int count = prSt.executeUpdate();
+ ```
+The executeUpdate() method is used when updating the database. It returns an int which tells how many records in the database were affected by the update.
+
+## Reusing a PreparedStatement
+Once a PreparedStatement is prepared, it can be reused after execution. You reuse a PreparedStatement by setting new values for the parameters and then execute it again. 
+
+```
+ //Run the same query with different values
+  prSt.setString(1, "Lopez");
+  prSt.setString(2, "Maria");
+  prSt.setString(3, "Donostia");
+			
+  count = prSt.executeUpdate();
+  ```
+	  
+Below an example to test the use of PreparedStatement:
+
+```
  
 import java.sql.*;
 
