@@ -1,4 +1,12 @@
-# JDBC
+# JDBC https://josuneha.github.io/JDBC
+Software Engineering
+
+* First steps
+* Handling exceptions
+* PreparedStatements 
+* Exercises
+
+
 
 This repository includes the following files:
 
