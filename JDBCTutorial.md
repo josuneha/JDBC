@@ -7,9 +7,11 @@ In this course, we will work with an Access database.
 
 ## Step 1: Define a DNS (Domain Name System)
 
-![DNSStep1](https://github.com/josuneha/JDBC/images/DNSStep1.png)
+Step 1
+![DNSStep1](https://josuneha.github.io/JDBC/images/DNSStep1.png)
+Step 2
+![DNSStep2](https://josuneha.github.io/JDBC/images/DNSStep2.png)
 
-![DNSStep2](https://github.com/josuneha/JDBC/images/DNSStep2.png)
 
 
 ## Step 2: Import libraries 
