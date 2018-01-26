@@ -2,10 +2,13 @@
 Software Engineering
 
 * First steps
-* Handling exceptions
+- [First steps](https://josuneha.github.io/JDBC/JDBCTutorial)
+* Handling exceptions  
+- [Handling exceptions](https://josuneha.github.io/JDBC/JDBCTutorial2)
 * PreparedStatements 
+- [PreparedStatements](https://josuneha.github.io/JDBC/JDBCTutorial3)
 * Exercises
-
+- [ExercisesLab](https://josuneha.github.io/JDBC/ExercisesLab)
 
 
 This repository includes the following files:
