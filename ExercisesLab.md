@@ -61,7 +61,7 @@ To understand better the importance of handling exceptions, you should execute t
 - [basicJDBC3.java](https://github.com/josuneha/JDBC/blob/master/files/basicJDBC3.java) 
 
 ## Exercise 5 PreparedStatement: select example
-Based on the example provided in [JDBCTutorial3](https://josuneha.github.io/JDBC/JDBCTutorial3) , modify it to select an order given a specific OrderId. 
+Based on the example provided in [JDBCPreparedStatements](https://josuneha.github.io/JDBC/JDBCTutorial3) , modify it to select an order given a specific OrderId. 
 For instance, show the CustomerID and OrderDate from the order OrderID= 10248
 
 ## Exercise 6 PreparedStatement: insert data from a file in the database 
