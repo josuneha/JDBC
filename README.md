@@ -9,6 +9,7 @@ Software Engineering
 - [Northbrick database](https://josuneha.github.io/JDBC/northbrick.mdb)
 - [Northbrick database relationships](https://josuneha.github.io/JDBC/images/Relationships.jpg)
 
-  
+  ![Northbrick database relationships](https://josuneha.github.io/JDBC/images/Relationships.JPG)
+
 
 
