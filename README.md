@@ -7,8 +7,7 @@ Software Engineering
 - [PreparedStatements](https://josuneha.github.io/JDBC/JDBCTutorial3)
 - [ExercisesLab](https://josuneha.github.io/JDBC/ExercisesLab)
 - [Northbrick database](https://josuneha.github.io/JDBC/northbrick.mdb)
-- [Northbrick database relationships](https://josuneha.github.io/JDBC/images/Relationships.jpg)
-
+- Northbrick database relationships
   ![Northbrick database relationships](https://josuneha.github.io/JDBC/images/Relationships.JPG)
 
 
