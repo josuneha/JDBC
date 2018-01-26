@@ -56,15 +56,17 @@ The ```try``` block contains set of statements where an exception can occur. A t
 A ```catch``` block is where you handle the exceptions, this block must follow a try block. A single try block can have several catch blocks associated with it. You can catch different exceptions in different catch blocks. When an exception occurs in try block, the corresponding catch block that handles that particular exception executes. For example if an arithmetic exception occurs in try block then the statements enclosed in catch block for arithmetic exception executes.
 If an exception occurs in the try block then the control of execution is passed to the corresponding catch block. A single try block can have multiple catch blocks associated with it, you should place the catch blocks in such a way that the generic exception handler catch block is at the last.
 
-To understand better the importance of handling exceptions, you should execute the following two files (basicJDBC2 and basicJDBC3) and see the differences.  
+To understand better the importance of handling exceptions, you should execute the following two files and see the differences. 
+- [basicJDBC2.java](https://github.com/josuneha/JDBC/blob/master/files/basicJDBC2.java) 
+- [basicJDBC3.java](https://github.com/josuneha/JDBC/blob/master/files/basicJDBC3.java) 
 
 ## Exercise 5 PreparedStatement: select example
 Based on the example provided in [JDBCTutorial3](https://josuneha.github.io/JDBC/JDBCTutorial3) , modify it to select an order given a specific OrderId. 
 For instance, show the CustomerID and OrderDate from the order OrderID= 10248
 
 ## Exercise 6 PreparedStatement: insert data from a file in the database 
-The file [namesAndCities.txt] (https://github.com/josuneha/JDBC/blob/master/files/namesAndCities.txt) contains information about employees that needs to be added to the database. Each row in the file contains the last name, first name and city. You should develop a program that reads this information from the file and inserts in the database using PreparedStatements. 
+The file [namesAndCities.txt](https://github.com/josuneha/JDBC/blob/master/files/namesAndCities.txt) contains information about employees that needs to be added to the database. Each row in the file contains the last name, first name and city. You should develop a program that reads this information from the file and inserts in the database using PreparedStatements. 
 
 ## Exercise 7: Review and test the files 
-Review the following files [ProductData.java] (https://github.com/josuneha/JDBC/blob/master/files/ProductData.java) and [ProductJavaTest.java](https://github.com/josuneha/JDBC/blob/master/files/ProductDataTest.java) to understand how they work and the results we get if we execute them using different parameters. 
+Review the following files [ProductData.java](https://github.com/josuneha/JDBC/blob/master/files/ProductData.java) and [ProductJavaTest.java](https://github.com/josuneha/JDBC/blob/master/files/ProductDataTest.java) to understand how they work and the results we get if we execute them using different parameters. 
 
