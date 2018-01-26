@@ -68,5 +68,5 @@ For instance, show the CustomerID and OrderDate from the order OrderID= 10248
 The file [namesAndCities.txt](https://github.com/josuneha/JDBC/blob/master/files/namesAndCities.txt) contains information about employees that needs to be added to the database. Each row in the file contains the last name, first name and city. You should develop a program that reads this information from the file and inserts in the database using PreparedStatements. 
 
 ## Exercise 7: Review and test the files 
-Review the following files [ProductData.java](https://github.com/josuneha/JDBC/blob/master/files/ProductData.java) and [ProductJavaTest.java](https://github.com/josuneha/JDBC/blob/master/files/ProductDataTest.java) to understand how they work and the results we get if we execute them using different parameters. 
+Review the following files [ProductData.java](https://github.com/josuneha/JDBC/blob/master/files/ProductData.java) and [ProductDataTest.java](https://github.com/josuneha/JDBC/blob/master/files/ProductDataTest.java) to understand how they work and the results we get if we execute them using different parameters. 
 
