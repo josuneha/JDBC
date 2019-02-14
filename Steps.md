@@ -6,7 +6,7 @@ In this course, we will work with an Access database.
 
 
 
-## Step 1: Define a DNS (Domain Name System)
+## Step 1: Define a DSN (Data Source Name)
 
 ![DNSStep1](https://github.com/josuneha/JDBC/blob/master/DNSStep1.png)
 
