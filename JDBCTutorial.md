@@ -5,12 +5,12 @@ In this course, we will work with an Access database.
 
 
 
-## Step 1: Define a DNS (Domain Name System)
+## Step 1: Define a DSN (Data Source Name)
 
 Step 1
-![DNSStep1](https://josuneha.github.io/JDBC/images/DNSStep1.png)
+![DSNStep1](https://josuneha.github.io/JDBC/images/DNSStep1.png)
 Step 2
-![DNSStep2](https://josuneha.github.io/JDBC/images/DNSStep2.png)
+![DSNStep2](https://josuneha.github.io/JDBC/images/DNSStep2.png)
 
 
 
