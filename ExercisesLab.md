@@ -4,23 +4,27 @@ In this first lab, we will be dealing with information from an existing database
 You can use the following basic example and modify it so that you don't to start programming from scratch. 
 
 ```
-import java.sql.*;
+import java.sql.*; //Step 2
 class basicJDBC {
 
     public static void main(String args[]) throws ClassNotFoundException, SQLException {
 
-        Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-        Connection connection = DriverManager.getConnection("jdbc:odbc:northbrick");
+        Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");  //Step 3
+        Connection connection = DriverManager.getConnection("jdbc:odbc:northbrick");   //Step 4
         
-        Statement statement = connection.createStatement();
-        ResultSet result = statement.executeQuery("Select * from Shippers");
+        Statement stmt = connection.createStatement();  // Step 5
+        ResultSet rs = stmt.executeQuery("Select * from Shippers");   //Step 6
         
-        while(result.next()) {
-            System.out.print(  result.getString("CompanyName")+", ");
-            System.out.println(result.getString("Phone"));
+        while(rs.next()) {   //Step 7
+            System.out.print( rs.getString("CompanyName")+", ");
+            System.out.println(rs.getString("Phone"));
         }
         
+        //Step 8
+        rs.close();
+        stmt.close();
         
+        //Step 9
         connection.close();
     }
 }
