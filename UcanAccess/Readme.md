@@ -45,3 +45,14 @@ public static Connection getConnection(ServletConfig config) {
 		return connection;
 	}
 ```
+
+# Ficheros en esta carpeta
+
+## Aplicación Northbrick 
+Esta carpeta contiene el proyecto Eclipse del proyecto northbrick3.
+
+## Fichero ConnectionUtils.java
+Fichero que hay que modificar si queremos usar el driver UcanAccess.
+
+## Ficher .jar Driver UcanAccess
+En la carpeta UcanAcces están los ficheros .jar que tendremos que incluir en nuestro proyecto
