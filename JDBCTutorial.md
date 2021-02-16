@@ -7,6 +7,9 @@ In this course, we will work with an Access database.
 
 ## Step 1: Define a DSN (Data Source Name)
 
+Important: if you do not see Microsoft Access Driver (*.mdb, *accdb) in the list, go to the following folder C:\Windows\SysWOW64\odbcad.exe.
+
+
 Step 1
 ![DSNStep1](https://josuneha.github.io/JDBC/images/DNSStep1.png)
 Step 2
