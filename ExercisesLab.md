@@ -74,3 +74,10 @@ The file [namesAndCities.txt](https://github.com/josuneha/JDBC/blob/master/files
 ## Exercise 7: Review and test the files 
 Review the following files [ProductData.java](https://github.com/josuneha/JDBC/blob/master/files/ProductData.java) and [ProductDataTest.java](https://github.com/josuneha/JDBC/blob/master/files/ProductDataTest.java) to understand how they work and the results we get if we execute them using different parameters. 
 
+## Exercise 8: Example of hacking a SQL query
+
+In this exercise you will test the usefulness of PreparedStatements. In the first file, we have use a common SQL sentence while in the second file we have used a PreparedStatement.  
+Please, execute both files using in both the same input and see the difference. 
+To execute first file: java basicJDBCHacked "Nancy' or 1=1 or "FirstName=' "
+To execute first file: java basicJDBCHacked2 "Nancy' or 1=1 or "FirstName=' "
+
