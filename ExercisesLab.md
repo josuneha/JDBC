@@ -76,8 +76,8 @@ Review the following files [ProductData.java](https://github.com/josuneha/JDBC/b
 
 ## Exercise 8: Example of hacking a SQL query
 
-In this exercise you will test the usefulness of PreparedStatements. In the first file, we have use a common SQL sentence while in the second file we have used a PreparedStatement.  
+In this exercise you will test the usefulness of PreparedStatements. In the first file [basicJDBCHacked], we have use a common SQL sentence while in the second file [basicJDBCHacked2] we have used a PreparedStatement.  
 Please, execute both files using in both the same input and see the difference. 
-To execute first file: java basicJDBCHacked "Nancy' or 1=1 or "FirstName=' "
-To execute first file: java basicJDBCHacked2 "Nancy' or 1=1 or "FirstName=' "
+- To execute first file: java basicJDBCHacked "Nancy' or 1=1 or "FirstName=' "
+- To execute first file: java basicJDBCHacked2 "Nancy' or 1=1 or "FirstName=' "
 
