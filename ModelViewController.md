@@ -19,3 +19,5 @@ The brains of the application that controls how data is displayed. The controlle
 
 Today the MVC pattern is used for modern web applications because it allows the application to be scalable, maintainable, and easy to expand. The MVC pattern helps you break up the frontend and backend code into separate components. This way, it's much easier to manage and make changes to either side without them interfering with each other.
 
+
+Source: https://www.freecodecamp.org/news/the-model-view-controller-pattern-mvc-architecture-and-frameworks-explained/
