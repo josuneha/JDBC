@@ -33,14 +33,14 @@ Class.forName( "sun.jdbc.odbc.JdbcOdbcDriver" );
 ```
 Connection connection = null;
 
-String url="jdbc:odbc:northwind";	         
+String url="jdbc:odbc:northbrick";	         
 connection = DriverManager.getConnection(url); 
 ```
 
 ## Step 5: Create a Statement object
 ```
-Statement statement;
-statement = connection.createStatement();
+Statement stmt;
+stmt = connection.createStatement();
 ```
 
 ## Step 6: Execute a query using a Statement
