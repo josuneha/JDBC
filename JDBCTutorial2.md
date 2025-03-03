@@ -6,19 +6,19 @@ An Exception is an unwanted event that interrupts the normal flow of the program
 A method catches an exception using a combination of the try and catch keywords: 
 ```
 try {
-   //  code
+    // Code that might throw an exception
 } catch (ExceptionName e1) {
-   // Catch block
+    // This block executes if an exception of type ExceptionName occurs
 }
 ```
 Another option can be: 
 ```
 try {
-   // code
+    // Code that might throw an exception
 } catch (ExceptionName e1) {
-   // Catch block
+   // This block executes if an exception of type ExceptionName occurs
 }finally {
-  //code 
+   // This block always executes, whether an exception occurs or not
 }
 ```
 
@@ -27,6 +27,23 @@ The try block contains set of statements where an exception can occur. A try blo
 A catch block is where you handle the exceptions, this block must follow a try block. A single try block can have several catch blocks associated with it. You can catch different exceptions in different catch blocks. When an exception occurs in try block, the corresponding catch block that handles that particular exception executes. For example if an arithmetic exception occurs in try block then the statements enclosed in catch block for arithmetic exception executes. If an exception occurs in the try block then the control of execution is passed to the corresponding catch block. A single try block can have multiple catch blocks associated with it, you should place the catch blocks in such a way that the generic exception handler catch block is at the last.
 
 Optionally, a finally-clause can be attached to a try-catch block. The code inside the finally clause will always be executed, even if an exception is thrown from within the try or catch block. If your code has a return statement inside the try or catch block, the code inside the finally-block will get executed before returning from the method. 
+
+In summary: 
+## try block:
+The code inside the try block is executed first.
+* If no exception occurs, the catch block is skipped, and execution moves to the finally block.
+* If an exception occurs, the program immediately jumps to the catch block that matches the exception type.
+## catch block (if an exception occurs):
+* If an exception of type ExceptionName is thrown inside try, this block executes.
+* If the exception is not of type ExceptionName, it will not be caught here, and the program may crash unless there is another catch block handling it.
+## finally block (always executes):
+* The finally block runs whether an exception occurs or not.
+* It is typically used for cleanup actions like closing files, releasing resources, or closing database connections.
+
+
+
+
+
 You can find in the following link the different type of exceptions you can handle: 
 [exceptions in Java](https://stackify.com/types-of-exceptions-java/#:~:text=There%20are%20mainly%20two%20types,Unchecked%20exception) 
 
