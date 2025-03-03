@@ -5,6 +5,14 @@ JDBC PreparedStatement can be used when you plan to use the same SQL statement m
 
 **Connection.prepareStatement()** method can provide you PreparedStatment object. This object provides setXXX() methods to provide query values. 
 
+Examples of setXXX() methods:
+- **setString**
+- **setLong**
+- **setInt**
+- **setDate**
+- **setFloat**
+- **setDouble**
+
 The main feature of a PreparedStatement object is that, unlike a Statement object, it is given a SQL statement when it is created. The advantage to this is that in most cases, this SQL statement is sent to the DBMS (Data Base Management System) right away, where it is compiled. As a result, the PreparedStatement object contains not just a SQL statement, but a SQL statement that has been precompiled. This means that when the PreparedStatement is executed, the DBMS can just run the PreparedStatement SQL statement without having to compile it first.
 
 Another important reason for using the PreparedStatements is that its use **avoids SQL injection**. SQL injection is a code injection technique, used to attack data-driven applications, in which nefarious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker). SQL injection must exploit a security vulnerability in an application's software, for example, when user input is either incorrectly filtered for string literal escape characters embedded in SQL statements or user input is not strongly typed and unexpectedly executed. SQL injection is mostly known as an attack vector for websites but can be used to attack any type of SQL database. See the following links from Wikipedia to see some examples:  [1](https://es.wikipedia.org/wiki/Inyecci%C3%B3n_SQL) and [2](https://en.wikipedia.org/wiki/SQL_injection)
