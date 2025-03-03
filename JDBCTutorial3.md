@@ -3,7 +3,7 @@
 
 JDBC PreparedStatement can be used when you plan to use the same SQL statement many times. It is used to handle precompiled query. If we want to execute same query with different values for more than one time then precompiled queries will reduce the number of compilations, and it **runs faster**. 
 
-**Connection.prepareStatement() **method can provide you PreparedStatment object. This object provides setXXX() methods to provide query values. 
+**Connection.prepareStatement()** method can provide you PreparedStatment object. This object provides setXXX() methods to provide query values. 
 
 The main feature of a PreparedStatement object is that, unlike a Statement object, it is given a SQL statement when it is created. The advantage to this is that in most cases, this SQL statement is sent to the DBMS (Data Base Management System) right away, where it is compiled. As a result, the PreparedStatement object contains not just a SQL statement, but a SQL statement that has been precompiled. This means that when the PreparedStatement is executed, the DBMS can just run the PreparedStatement SQL statement without having to compile it first.
 
