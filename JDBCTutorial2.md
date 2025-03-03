@@ -47,8 +47,33 @@ The code inside the try block is executed first.
 You can find in the following link the different type of exceptions you can handle: 
 [exceptions in Java](https://stackify.com/types-of-exceptions-java/#:~:text=There%20are%20mainly%20two%20types,Unchecked%20exception) 
 
+## Basic Example
+```
+public class basicExampleExceptions {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Inside try block");
+            int result = 10 / 0; // Causes ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block always executes");
+        }
+        System.out.println("Program continues...");
+    }
+}
 
-## Example
+```
+The output would be:
+```
+Inside try block
+Exception caught: / by zero
+Finally block always executes
+Program continues...
+```
+
+
+## Example with databases
 
 ```
 import java.sql.*;
