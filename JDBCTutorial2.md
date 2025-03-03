@@ -42,34 +42,54 @@ The code inside the try block is executed first.
 
 
 
-
-
 You can find in the following link the different type of exceptions you can handle: 
 [exceptions in Java](https://stackify.com/types-of-exceptions-java/#:~:text=There%20are%20mainly%20two%20types,Unchecked%20exception) 
 
 ## Basic Example
+This is a simple example to see the difference between managing or not managing exceptions when developing a program. 
+Imagine that you do not take into account that when doing the division, the denominator can be 0.
+
+### Example without Exceptions
+This program does not handle division by zero, which can cause a runtime crash.
+
 ```
-public class basicExampleExceptions {
+public class WithoutException {
     public static void main(String[] args) {
+        int a = 10, b = 0;
+        int result = a / b; // This will cause a runtime error: ArithmeticException
+        System.out.println("Result: " + result);
+    }
+}
+```
+The result you will get will be something similar to the following text and the program will stop:
+```
+java.lang.ArithmeticException: / by zero.
+```
+
+### Example with handling Exceptions
+
+This version catches the exception and handles it successfully.
+```
+public class WithException {
+    public static void main(String[] args) {
+        int a = 10, b = 0;
+        
         try {
-            System.out.println("Inside try block");
-            int result = 10 / 0; // Causes ArithmeticException
+            int result = a / b;
+            System.out.println("Result: " + result);
         } catch (ArithmeticException e) {
-            System.out.println("Exception caught: " + e.getMessage());
-        } finally {
-            System.out.println("Finally block always executes");
+            System.out.println("Error: Division by zero is not allowed.");
         }
-        System.out.println("Program continues...");
+        
+        System.out.println("Program continues after handling exception.");
     }
 }
 
 ```
 The output would be:
 ```
-Inside try block
-Exception caught: / by zero
-Finally block always executes
-Program continues...
+Error: Division by zero is not allowed.
+Program continues after handling exception.
 ```
 
 
